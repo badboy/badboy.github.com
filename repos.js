@@ -17,6 +17,7 @@ $(function() {
 
 		$('#repos').text('');
 		$.each(repos.slice(0, len), function(ind, val) {
+            if(val.name == 'badboy.github.com') return;
 			if(ind+1 == len)
 				$('#repos').append('<li><a href="' + val.url + '">&quot;' + val.name + '&quot;</a></li>')
 			else
